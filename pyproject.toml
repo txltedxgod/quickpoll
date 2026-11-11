@@ -1,0 +1,19 @@
+[project]
+name = "quickpoll-backend"
+version = "1.0.0"
+description = "Real-time polling backend using FastAPI, async SQLite, and WebSockets."
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+pythonpath = ["backend"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["backend/tests"]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+ignore = ["B008"]
